@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(46,46,46);
+    color: rgb(255,255,255);
+    font-family: 'Anton', sans-serif;
+    
+}
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 40px 10px 40px 10px;
+    border: 40px;  
+}
+
+h1 {
+    font-size: 80px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color : rgb(251, 196, 16);
+}
+
+h2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+}
+h4 {
+    font-family: cursive;
+    color:rgb(16, 165, 251);
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;  
+}
+
+.weapons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: rgb(21,21,21);
+    margin: 15px;
+    color: rgb(230,230,230);
+    border-radius: 10px;
+    padding: 0 40px 10px 40px;
+    font-size: 80px;
+}
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    border: 10px;
+    font-size: 20px;
+}
+
+/* modals*/
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--primary-dark);
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-title {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .buttonRestart {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 1;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+  
+ #endGameMessage {
+    font-size: 100px;
+    color: crimson;
+    margin-top: 10px;
+    
+ }
+
+ .modal-title {
+    animation: mymove 2s infinite alternate;
+ }
+ @keyframes mymove {
+    from {opacity:0;}
+    to {opacity: 1;}
+}
